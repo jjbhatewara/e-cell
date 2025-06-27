@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Company Investment Platform</title>
+    <title>E-cell SIBM PUNE Investment Platform</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Inter Font -->
@@ -114,19 +114,28 @@
     </div>
 
     <header class="bg-indigo-700 py-6">
-        <div class="container mx-auto px-4 text-center">
-            <h1 class="text-3xl font-bold text-white">Company Investment Platform</h1>
-            <p class="text-indigo-200 mt-2">Invest in exciting companies and ask your questions!</p>
-            <div class="mt-4 text-xl font-medium text-white">
-                Total Available Points: <span id="total-points">1000</span>
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <!-- SSX Logo on the left -->
+            <img src="https://jjbhatewara.github.io/e-cell/E-cell%20Logo.png" alt="SSX Logo" class="h-20 object-contain">
+
+            <!-- Title and Description in the center -->
+            <div class="text-center flex-grow">
+                <h1 class="text-3xl font-bold text-white">E-cell SIBM PUNE Investment Platform</h1>
+                <p class="text-indigo-200 mt-2">Invest in exciting startups and ask your questions!</p>
             </div>
+
+            <!-- E-cell Logo on the right -->
+            <img src="https://jjbhatewara.github.io/e-cell/ssx_logo.jpg" alt="E-cell SIBM PUNE Logo" class="h-20 object-contain">
+        </div>
+        <div class="text-center text-xl font-medium text-white mt-4">
+            Total Available Points: <span id="total-points">1000</span>
         </div>
     </header>
 
     <main class="container mx-auto px-4 py-8">
         <!-- Investment Section -->
         <section class="mb-12">
-            <h2 class="text-2xl font-semibold text-gray-800 mb-6">Companies for Investment</h2>
+            <h2 class="text-2xl font-semibold text-gray-800 mb-6">Startups for Investment</h2>
             <div id="companies-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Company cards will be injected here by JavaScript -->
             </div>
@@ -170,39 +179,39 @@
 
         // Mock data for companies
         const companies = [{
-            id: 'compA',
-            name: 'Tech Innovators Inc.',
-            currentValuation: 500000,
+            id: 'startA',
+            name: 'InnovateX Solutions',
+            currentValuation: 300000,
             minInvestment: 10
         }, {
-            id: 'compB',
-            name: 'Green Energy Solutions',
-            currentValuation: 750000,
+            id: 'startB',
+            name: 'EcoHarvest Farms',
+            currentValuation: 450000,
             minInvestment: 15
         }, {
-            id: 'compC',
-            name: 'Future Robotics Corp.',
-            currentValuation: 1200000,
+            id: 'startC',
+            name: 'FutureLink AI',
+            currentValuation: 600000,
             minInvestment: 20
         }, {
-            id: 'compD',
-            name: 'Digital Marketing Pros',
-            currentValuation: 300000,
+            id: 'startD',
+            name: 'Gourmet Grub Delivery',
+            currentValuation: 200000,
             minInvestment: 5
         }, {
-            id: 'compE',
-            name: 'Health & Wellness Co.',
-            currentValuation: 450000,
+            id: 'startE',
+            name: 'SkillUp Academy',
+            currentValuation: 350000,
             minInvestment: 12
         }, {
-            id: 'compF',
-            name: 'Edu-Tech Innovations',
-            currentValuation: 600000,
+            id: 'startF',
+            name: 'GreenWave Energy',
+            currentValuation: 550000,
             minInvestment: 18
         }, {
-            id: 'compG',
-            name: 'Sustainable Agriculture Ltd.',
-            currentValuation: 850000,
+            id: 'startG',
+            name: 'Urban Mobility Tech',
+            currentValuation: 700000,
             minInvestment: 25
         }];
 
