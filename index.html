@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-cell SIBM PUNE Investment Platform</title>
+    <title>SSX: StartUp Stock Exchange</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Inter Font -->
@@ -11,34 +12,44 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f0f2f5; /* Light gray background */
+            background-color: #f0f2f5;
+            /* Light gray background */
         }
+        
         .card {
             background-color: #ffffff;
-            border-radius: 12px; /* Rounded corners */
+            border-radius: 12px;
+            /* Rounded corners */
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             padding: 24px;
             margin-bottom: 24px;
         }
+        
         .btn-primary {
-            background-color: #4f46e5; /* Indigo-600 */
+            background-color: #4f46e5;
+            /* Indigo-600 */
             color: #ffffff;
             padding: 10px 20px;
             border-radius: 8px;
             font-weight: 500;
             transition: background-color 0.2s ease-in-out;
         }
+        
         .btn-primary:hover {
-            background-color: #4338ca; /* Indigo-700 */
+            background-color: #4338ca;
+            /* Indigo-700 */
         }
+        
         .input-field {
-            border: 1px solid #d1d5db; /* Gray-300 */
+            border: 1px solid #d1d5db;
+            /* Gray-300 */
             border-radius: 8px;
             padding: 10px 14px;
             width: 100%;
             box-sizing: border-box;
         }
         /* Custom message box styling */
+        
         .message-box-container {
             position: fixed;
             top: 0;
@@ -50,8 +61,10 @@
             justify-content: center;
             align-items: center;
             z-index: 1000;
-            display: none; /* Hidden by default */
+            display: none;
+            /* Hidden by default */
         }
+        
         .message-box {
             background-color: white;
             padding: 2rem;
@@ -61,15 +74,19 @@
             max-width: 400px;
             width: 90%;
         }
+        
         .message-box h3 {
             font-size: 1.5rem;
             font-weight: 600;
             margin-bottom: 1rem;
         }
+        
         .message-box p {
             margin-bottom: 1.5rem;
-            color: #4b5563; /* Gray-600 */
+            color: #4b5563;
+            /* Gray-600 */
         }
+        
         .message-box button {
             background-color: #4f46e5;
             color: white;
@@ -78,15 +95,58 @@
             cursor: pointer;
             transition: background-color 0.2s ease-in-out;
         }
+        
         .message-box button:hover {
             background-color: #4338ca;
         }
         /* Custom header background color based on the provided image */
+        
         .header-bg-custom {
-            background-color: #1A202C; /* Dark blue/grey color from the attached image */
+            background-color: #1A202C;
+            /* Dark blue/grey color from the attached image */
+        }
+        
+        .company-name-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            /* Space between text and icon */
+        }
+        
+        .company-logo-svg {
+            width: 24px;
+            height: 24px;
+            fill: currentColor;
+            /* Inherit color from parent text */
+        }
+        
+        .points-badge {
+            background-color: #e0e7ff;
+            /* Light indigo */
+            color: #4338ca;
+            /* Darker indigo for text */
+            padding: 8px 16px;
+            border-radius: 20px;
+            /* More rounded, like a badge */
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: inline-block;
+            /* To make it fit content */
+            margin-left: 1rem;
+            /* Space from the heading */
+        }
+        
+        .angelone-present-logo {
+            height: 45px;
+            /* Adjust size as needed */
+            margin-right: 15px;
+            /* Space between logo and text */
+            vertical-align: middle;
+            /* Align with text */
         }
     </style>
 </head>
+
 <body class="antialiased">
 
     <!-- Message Box Container -->
@@ -100,27 +160,40 @@
 
     <header class="header-bg-custom py-6">
         <div class="container mx-auto px-4 flex justify-between items-center">
-            <!-- SSX Logo on the left -->
-            <img src="https://jjbhatewara.github.io/e-cell/E-cell%20Logo.png" alt="E-Cell Logo" class="h-20 object-contain">
+            <!-- E-cell Logo on the left -->
+            <img src="https://jjbhatewara.github.io/e-cell/E-cell%20Logo.png" alt="E-cell SIBM PUNE Logo" class="h-20 object-contain">
 
-            <!-- Title and Description in the center -->
+            <!-- Title, Description, and Title Sponsor in the center -->
             <div class="text-center flex-grow">
-                <h1 class="text-3xl font-bold text-white">E-cell SIBM PUNE Investment Platform</h1>
+                <div class="flex items-center justify-center mb-2">
+                    <img src="https://jjbhatewara.github.io/e-cell/image.png" alt="AngelOne Logo" class="angelone-present-logo">
+                    <p class="text-lg font-semibold text-white">presents...</p>
+                </div>
+                <h1 class="text-3xl font-bold text-white">SSX: StartUp Stock Exchange</h1>
                 <p class="text-indigo-200 mt-2">Invest in exciting startups and ask your questions!</p>
             </div>
-            
-            <!-- E-cell Logo on the right -->
-            <img src="https://jjbhatewara.github.io/e-cell/ssx_logo.jpg" alt="E-cell SIBM PUNE Logo" class="h-20 object-contain">
+
+            <!-- SSX Logo on the right -->
+            <img src="https://jjbhatewara.github.io/e-cell/ssx_logo.png" alt="SSX Logo" class="h-24 object-contain">
         </div>
-        <div class="text-center text-xl font-medium text-white mt-4">
-            Total Available Points: <span id="total-points">1000</span>
-        </div>
+
+        <!-- Sponsors Section (AngelOne Logo - removed as it's now part of the main title area) -->
+        <!-- <div class="container mx-auto px-4 text-center mt-6">
+            <p class="text-md font-medium text-indigo-200 mb-2">Our Sponsors:</p>
+            <img src="https://jjbhatewara.github.io/e-cell/image.png" alt="AngelOne Logo" class="h-12 mx-auto object-contain">
+        </div> -->
     </header>
 
     <main class="container mx-auto px-4 py-8">
         <!-- Investment Section -->
         <section class="mb-12">
-            <h2 class="text-2xl font-semibold text-gray-800 mb-6">Startups for Investment</h2>
+            <div class="flex items-center mb-6">
+                <h2 class="text-2xl font-semibold text-gray-800">Startups for Investment</h2>
+                <!-- Total Available Points as a badge -->
+                <div class="points-badge">
+                    Total Available Points: <span id="total-points">1000</span>
+                </div>
+            </div>
             <div id="companies-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Company cards will be injected here by JavaScript -->
             </div>
@@ -163,15 +236,61 @@
         const userInvestments = {}; // Stores how much the user has invested in each company
 
         // Mock data for companies
-        const companies = [
-            { id: 'startA', name: 'InnovateX Solutions', currentValuation: 300000, minInvestment: 10 },
-            { id: 'startB', name: 'EcoHarvest Farms', currentValuation: 450000, minInvestment: 15 },
-            { id: 'startC', name: 'FutureLink AI', currentValuation: 600000, minInvestment: 20 },
-            { id: 'startD', name: 'Gourmet Grub Delivery', currentValuation: 200000, minInvestment: 5 },
-            { id: 'startE', name: 'SkillUp Academy', currentValuation: 350000, minInvestment: 12 },
-            { id: 'startF', name: 'GreenWave Energy', currentValuation: 550000, minInvestment: 18 },
-            { id: 'startG', name: 'Urban Mobility Tech', currentValuation: 700000, minInvestment: 25 }
-        ];
+        const companies = [{
+            id: 'startA',
+            name: 'InnovateX Solutions',
+            minInvestment: 10
+        }, {
+            id: 'startB',
+            name: 'EcoHarvest Farms',
+            minInvestment: 15
+        }, {
+            id: 'startC',
+            name: 'FutureLink AI',
+            minInvestment: 20
+        }, {
+            id: 'startD',
+            name: 'Gourmet Grub Delivery',
+            minInvestment: 5
+        }, {
+            id: 'startE',
+            name: 'SkillUp Academy',
+            minInvestment: 12
+        }, {
+            id: 'startF',
+            name: 'GreenWave Energy',
+            minInvestment: 18
+        }, {
+            id: 'startG',
+            name: 'Urban Mobility Tech',
+            minInvestment: 25
+        }];
+
+        /**
+         * Returns an SVG icon based on the company ID.
+         * @param {string} companyId - The ID of the company.
+         * @returns {string} - The SVG string for the logo.
+         */
+        function getCompanyLogoSvg(companyId) {
+            switch (companyId) {
+                case 'startA': // InnovateX Solutions - Gear for innovation/tech
+                    return `<svg class="company-logo-svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6zM13 8h-2v3H8v2h3v3h2v-3h3v-2h-3V8z"/></svg>`;
+                case 'startB': // EcoHarvest Farms - Leaf for eco/agriculture
+                    return `<svg class="company-logo-svg" viewBox="0 0 24 24"><path d="M17 8c-2.48 0-4.5 2.02-4.5 4.5S14.52 17 17 17s4.5-2.02 4.5-4.5S19.48 8 17 8zM7 11.5c-2.48 0-4.5 2.02-4.5 4.5S4.52 20.5 7 20.5s4.5-2.02 4.5-4.5S9.48 11.5 7 11.5zM12.71 6.54c-.18-.18-.45-.29-.71-.29H4V2h-2v4h.01L2 22h2L4 12h7.29l3.58-3.58c.39-.39.39-1.02 0-1.41l-.7-.7c-.39-.38-1.02-.38-1.41 0z"/></svg>`;
+                case 'startC': // FutureLink AI - Robot/processor for AI
+                    return `<svg class="company-logo-svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM14 9h2V7h-2V5h-2v2h-2v2h2v2h2V9zm-4 4H8v2h2v2h2v-2h2v-2h-2v-2z"/></svg>`;
+                case 'startD': // Gourmet Grub Delivery - Food/Cutlery
+                    return `<svg class="company-logo-svg" viewBox="0 0 24 24"><path d="M7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-2-2-2H7zm0 18H5V5h2v14zm8 0h-6V5h6v14zM19 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-2-2-2h-8zM19 19h-6V5h6v14z"/></svg>`;
+                case 'startE': // SkillUp Academy - Graduation cap/book
+                    return `<svg class="company-logo-svg" viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.5V15h2V9L12 3zm6.32 8.92L12 15.35 5.68 11.92l-.68.34L12 16.5l8-4-1.68-.84zM12 5.38L18.06 8.5 12 11.62 5.94 8.5 12 5.38z"/></svg>`;
+                case 'startF': // GreenWave Energy - Lightning bolt/leaf combination
+                    return `<svg class="company-logo-svg" viewBox="0 0 24 24"><path d="M13 14.72V21h-2v-6.28H7.31L12 3l4.69 11.72zM12 5.8l-2.4 6.01h4.8L12 5.8z"/><path d="M17 18h-2v-2h2v2zm0-4h-2v-2h2v2z"/></svg>`;
+                case 'startG': // Urban Mobility Tech - Car/road
+                    return `<svg class="company-logo-svg" viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/></svg>`;
+                default:
+                    return `<svg class="company-logo-svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>`; // Default generic icon
+            }
+        }
 
         // Get container for companies and total points display
         const companiesContainer = document.getElementById('companies-container');
@@ -193,8 +312,10 @@
                 const companyCard = document.createElement('div');
                 companyCard.className = 'card';
                 companyCard.innerHTML = `
-                    <h3 class="text-xl font-semibold text-gray-900 mb-2">${company.name}</h3>
-                    <p class="text-gray-600 mb-2">Current Valuation: <span id="valuation-${company.id}">${company.currentValuation.toLocaleString()} points</span></p>
+                    <div class="company-name-container">
+                        ${getCompanyLogoSvg(company.id)}
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">${company.name}</h3>
+                    </div>
                     <p class="text-gray-700 font-medium mb-4">Your Investment: <span id="user-invested-${company.id}">${userInvestments[company.id].toLocaleString()} points</span></p>
                     <div class="flex items-center space-x-2">
                         <input type="number" id="input-${company.id}" class="input-field flex-grow" placeholder="Enter investment points" min="${company.minInvestment}">
@@ -308,5 +429,5 @@
         });
     </script>
 </body>
-</html>
 
+</html>
